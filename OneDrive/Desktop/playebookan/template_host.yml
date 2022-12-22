@@ -18,7 +18,7 @@
       dest: /opt/ 
 
   - name: unzip template 
-    ansible.builtin.unarchive:
+    unarchive:
       src: /opt/
       dest: /var/www/html/
       remote_src: yes
