@@ -6,15 +6,13 @@
     yum:
       name: "{{items}}"
       state: present
-   # when: ansible_distribution == "CentOS"
     loop:
       - http
       - unzip
       - wget
        
   - name: downlod template 
-    #uri:
-     ansible.builtin.package
+    uri:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
       dest: /opt/ 
 
