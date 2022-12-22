@@ -2,15 +2,16 @@
   hosts: all
   become: yes
   tasks: 
-  - name: install package
-    ansible.builtin.packages: 
-      name: "{{item}}"
+  - name: install package for linux
+    yum:
+      name: "{{items}}"
       state: present
-      loop:
-       - httpd 
-       - unzip 
-       - wget 
-
+    when: ansible_distribution == "CentOS"
+    loop:
+      - http
+      - unzip
+      - wget
+       
   - name: downlod template 
     uri:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
