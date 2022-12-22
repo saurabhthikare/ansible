@@ -1,0 +1,26 @@
+- name: template hosting  playbooks
+  hosts: all
+  become: yes
+  tasks: 
+  - name: install package
+    ansible.builtin.package:
+    state: present
+    name: "{{item}}"
+    loop: 
+      - httpd 
+      - unzip 
+      - wget 
+
+  - name: downlod template 
+    ansible.builtin.get_url:
+    url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
+    dest : /opt/ 
+
+  - name: unzip template 
+    ansible.builtin.unarchive:
+    src: /opt/
+    dest : /var/www/html/
+    remote_src : yes
+
+  - name: restart httpd service
+    shell: systemctl restart httpd
