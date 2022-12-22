@@ -3,7 +3,7 @@
   become: yes
   tasks: 
   - name: install package
-    yum:  
+    ansible.builtin.packages: 
       name: "{{item}}"
       state: present
       loop:
