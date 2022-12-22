@@ -6,10 +6,10 @@
      ansible.builtin.package:
      state: present
      name: "{{item}}"
-    loop: 
-      - httpd 
-      - unzip 
-      - wget 
+     loop: 
+       - httpd 
+       - unzip 
+       - wget 
 
    - name: downlod template 
      ansible.builtin.get_url:
