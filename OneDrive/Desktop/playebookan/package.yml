@@ -1,5 +1,5 @@
 
-  name: package installation using playbooks
+- name: package installation using playbooks
   hosts: all
   become: yes
   tasks:
