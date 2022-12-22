@@ -1,0 +1,9 @@
+
+  name: package installation using playbooks
+  hosts: all
+  become: yes
+  tasks:
+   - name: httpd installations
+     ansible.builtin.package: 
+      name: httpd
+      state: present
