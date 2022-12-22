@@ -13,14 +13,15 @@
       - wget
        
   - name: downlod template 
-    uri:
+    #uri:
+     ansible.builtin.package
       url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
       dest: /opt/ 
 
   - name: unzip template 
     unarchive:
       src: /opt/
-      dest: /var/www/html/
+      dest: /var/www/html
       remote_src: yes
 
   - name: restart httpd service
