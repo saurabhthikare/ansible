@@ -4,9 +4,9 @@
   tasks: 
   - name: install package
     yum:  
-      state: present
       name: "{{item}}"
-      loop: 
+      state: present
+      loop:
        - httpd 
        - unzip 
        - wget 
