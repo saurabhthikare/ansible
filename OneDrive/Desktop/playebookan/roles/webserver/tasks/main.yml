@@ -16,4 +16,4 @@
     remote_src: yes
   
 - name: restart httpsd 
-  shell: systemctl restart httpsd
+  shell: systemctl restart httpd
