@@ -12,13 +12,13 @@
       - wget
        
   - name: downlod template 
-    uri:
+    ansible.builtin.get_url:
       url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
       dest: /opt/ 
 
   - name: unzip template 
     ansible.builtin.unarchive:
-      src: /opt/
+      src: /opt/cial.zip
       dest: /var/www/html
       remote_src: yes
 
