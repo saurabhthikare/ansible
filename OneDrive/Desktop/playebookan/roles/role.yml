@@ -1,0 +1,6 @@
+- name: plybook for webserver
+  hosts: all
+  become: yes
+  tasks: 
+    - webserver
+    #- appserver

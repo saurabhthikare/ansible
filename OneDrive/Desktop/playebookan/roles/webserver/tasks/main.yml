@@ -1,0 +1,19 @@
+
+- name: package install
+  ansible.builtin.package:
+    state: present
+    name: httpd
+
+- name: downloaded templates
+  ansible.builtin.get_url:
+    url: https://www.free-css.com/assets/files/free-css-templates/download/page285/cial.zip
+    dest: /opt/
+
+- name: unzip templates
+  ansible.builtin.unarchive:
+    src: /opt/cial 
+    dest: /var/www/html
+    remote_src: yes
+  
+- name: restart httpsd 
+  shell: systemctl restart httpsd
