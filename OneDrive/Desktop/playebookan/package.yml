@@ -5,5 +5,5 @@
   tasks:
    - name: httpd installations
      ansible.builtin.package: 
-      name: httpd
-      state: present
+    name: httpd
+    state: present
