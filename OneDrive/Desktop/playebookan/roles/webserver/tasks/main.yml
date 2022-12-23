@@ -1,6 +1,6 @@
 
 - name: package install
-  ansible.builtin.package:
+  yum:
     state: present
     name: httpd
 
@@ -10,7 +10,7 @@
     dest: /opt/
 
 - name: unzip templates
-  ansible.builtin.unarchive:
+  unarchive:
     src: /opt/cial 
     dest: /var/www/html
     remote_src: yes
