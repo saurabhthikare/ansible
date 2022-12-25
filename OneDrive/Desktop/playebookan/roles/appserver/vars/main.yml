@@ -1,0 +1,4 @@
+tc_url: "https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz"
+tc_last: "{{tc_url.split('/') | last}}"
+tc_dir: "/opt/{{tc_last | regex_replace('.zip',")}}"
+#s3_bucket: "

@@ -1,0 +1,26 @@
+- name: install package
+  yum:
+    name: "{{item}}"
+    state: present
+  loop: 
+    - httpd 
+    - java 
+    - mysql
+
+- name: package download tomcat
+  ansible.builtin.get_url:
+     url: "{{tc_url}}"
+     dest: /opt/  
+
+- name: unzip tomcat 
+  unarchive:
+   src: /opt/apache-tomcat-9.0.70.tar
+   dest: /opt/
+   mode: 0755
+   remote_src: yes 
+
+- name: 
+
+
+
+
