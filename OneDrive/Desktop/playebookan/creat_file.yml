@@ -2,9 +2,9 @@
   hosts: all
   become: yes
   tasks:  
-   - name: file creation
-      file: path=/home/ec2-user/test.txt  state=touch
+  - name: file creation
+    file: path=/home/ec2-user/test.txt  state=touch
 
-   - name: directy creation
-      file: path=/home/ec2-user/dir state=directye
-      mode: 0755
+  - name: directy creation
+    file: path=/home/ec2-user/dir state=directye mode=775 owner=ec2-user
+    
