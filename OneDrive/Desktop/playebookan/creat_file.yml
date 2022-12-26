@@ -6,5 +6,5 @@
     file: path=/home/ec2-user/test.txt  state=touch
 
   - name: directy creation
-    file: path=/home/ec2-user/dir state=directye mode=775 owner=ec2-user
+    file: path=/home/ec2-user/dir state=directory mode=775 owner=ec2-user
     
