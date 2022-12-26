@@ -2,11 +2,9 @@
   hosts: all
   become: yes
   tasks:  
-  - name: file creation
-    file: path=/opt/test.txt  
-    state: touch
+   - name: file creation
+     file: path=/opt/test.txt  state: touch
 
-  - name: directy creation
-    file: path=/opt/
-    state: directyes
-    mode: 0755
+   - name: directy creation
+     file: path=/opt/ state: directyes
+      mode: 0755
