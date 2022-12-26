@@ -6,5 +6,5 @@
      file: path=/opt/test.txt  state=touch
 
    - name: directy creation
-     file: path=/opt/ state=directyes
-      mode: 0755
+     file: path=/opt/dir state=directyes
+     mode: 0755
