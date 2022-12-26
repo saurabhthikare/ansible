@@ -3,8 +3,8 @@
   become: yes
   tasks:  
    - name: file creation
-     file: path=/opt/test.txt  state: touch
+     file: path=/opt/test.txt  state=touch
 
    - name: directy creation
-     file: path=/opt/ state: directyes
+     file: path=/opt/ state=directyes
       mode: 0755
